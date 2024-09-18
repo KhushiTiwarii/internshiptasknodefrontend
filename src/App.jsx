@@ -9,6 +9,13 @@ import TaskDetailsX from "./components/TaskDetailsX";
 import TaskDetailsYoutube from "./components/TaskDetailsYoutube";
 import TaskDetailsTelegram from "./components/TaskDetailsTelegram";
 import TaskDetailsLinkedIn from "./components/TaskDetailsLinkedin";
+import TaskList from "./components/TaskList";
+import Register from "./components/Register";
+import Login from "./components/Login";
+import SubmitProof from "./components/SubmitProof";
+import Homepage from "./components/HomePage";
+import PlatformTasks from "./components/PlatformTasks";
+import TaskSubmit from "./components/TaskSubmit";
 
 const App = () => {
   const [darkMode, setDarkMode] = useState(false); // Manage dark mode state
@@ -41,13 +48,18 @@ const App = () => {
 
       <main>
         <Routes>
-          <Route path='/' element={<Home />} />
+          {/* <Route path='/' element={<Home />} />
           <Route path='/instagram-task' element={<TaskDetailsIg />} />
           <Route path='/facebook-task' element={<TaskDetailsFb />} />
           <Route path='/x-task' element={<TaskDetailsX />} />
           <Route path='/youtube-task' element={<TaskDetailsYoutube />} />
           <Route path='/telegram-task' element={<TaskDetailsTelegram />} />
-          <Route path='/linkedin-task' element={<TaskDetailsLinkedIn />} />
+          <Route path='/linkedin-task' element={<TaskDetailsLinkedIn />} /> */}
+          <Route path="/" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/home" element={<Homepage />} />
+        <Route path="/platform/:platform" element={<PlatformTasks />} />
+        <Route path="/task/:taskId" element={<TaskSubmit />} />
         </Routes>
       </main>
 
